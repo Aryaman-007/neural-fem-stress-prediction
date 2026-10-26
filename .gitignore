@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+venv/
+*.pyc
+
+# Generated model checkpoints
+*.pth
+
+# Large simulation datasets
+*.csv
+
+# Local configuration
+.env
