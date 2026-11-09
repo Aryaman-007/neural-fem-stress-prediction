@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import torch
+import joblib
 from sklearn.preprocessing import StandardScaler
 from torch.utils.data import TensorDataset,DataLoader
 df = pd.read_csv('beam_dataset_dpf.csv')
@@ -70,4 +71,8 @@ dev_loader = DataLoader(
     dev_dataset,
     batch_size=2048,
     shuffle=True
+)
+
+joblib.dump(
+    {"scaler_X":scaler_X,"scaler_y":scaler_y},"scalers.pkl"
 )

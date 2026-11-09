@@ -2,7 +2,7 @@ from data_processing import X_test_tensor,y_test_tensor,scaler_y
 from model import StressMLP
 import torch
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error,root_mean_squared_error,r2_score
 model = StressMLP()
 
